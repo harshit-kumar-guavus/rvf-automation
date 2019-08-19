@@ -1,0 +1,51 @@
+# You can choose to skip some attributes that are given in default tag if the value for that VM is same as that in the
+# default tag.
+
+defaults:
+  username: root
+  password: guavus@123
+  dynamic_vm_ips: True
+  vip_hostname_domain: <Hostname along with the domain of this vip>
+  vip: <VIP of the cluster>
+  nameservice: <Nameservice of the cluster>
+  stage: <Stage type given in the platform installer config>
+  inventory_name: <Inventory name given in the platform installer config>
+  customer_name: <Customer name given in the platform installer config>
+  platform: ambari
+  kerberized: False
+  vm_netmask: 255.255.252.0
+  vm_gateway: 192.168.132.1
+  type: DATANODE,ETCD,HREGION,HBASE,ZOOKEEPER,REDIS,REDIS_MASTER,REDIS_SLAVE,HADOOP_HDFS,HADOOP_YARN,KAFKA,KAFKA_BROKER,FLANNEL,DOCKER,HYPERKUBE_PROXY,HYPERKUBE_KUBELET,NIFI,NODE_MANAGER,HIVE,HIVE_SERVER,CORE_DNS,KAFKA_MM,SNMP
+bare_metals:
+  BM1:
+    ip: dummy
+    vm:
+      <hostname of management node>:
+        vm_ip: <IP address of management node>
+        type: MANAGEMENT,PSQL,DOCKER,HYPERKUBE_PROXY,HYPERKUBE_KUBELET,JOURNALNODE,ATLAS,RANGER,RANGER_ADMIN,RANGER_USERSYNC,RANGER_TAGSYNC,HISTORY_SERVER,SPARK2_HISTORY_SERVER,ELASTICSEARCH,JANUSGRAPH,AMBARI,GRAFANA,SNMP
+        hostname_domain: <Hostname along with the domain of this VM>
+      <hostname of load balancer node-01>:
+        vm_ip: <IP address of load balancer node-01>
+        type: LB,HAPROXY,FLANNEL,DOCKER,HYPERKUBE_PROXY,HYPERKUBE_KUBELET,COROSYNC,PACEMAKER,SNMP
+        hostname_domain: <Hostname along with the domain of this VM>
+      <hostname of load balancer node-02>:
+        vm_ip: <IP address of load balancer node-02>
+        type: LB,HAPROXY,FLANNEL,DOCKER,HYPERKUBE_PROXY,HYPERKUBE_KUBELET,COROSYNC,PACEMAKER,SNMP
+        hostname_domain: <Hostname along with the domain of this VM>
+      <hostname of slave node-01>:
+        vm_ip: <IP address of slave node-01>
+        hostname_domain: testautomation002-slv-01.gvs.ggn
+      <hostname of master node-01>:
+        vm_ip: <IP address of master node-01>
+        type: NAMENODE,KUBERNETES,HYPERKUBE_SCHEDULER,HYPERKUBE_APISERVER,HYPERKUBE_CONTROLLER_MANAGER,FLANNEL,DOCKER,HYPERKUBE_PROXY,HYPERKUBE_KUBELET,HMASTER,HIVE,HADOOP_HDFS,HADOOP_YARN,ZKFC,HBASE,SPARK,SCHEMA_REGISTRY,PGHA_WHATCHDOG,RESOURCE_MANAGER,JOURNALNODE,KUBERNETES_DASHBOARD,HIVE_METASTORE,CDAP,CDAP_AUTH_SERVER,CDAP_MASTER,CDAP_ROUTER,CDAP_UI
+        hostname_domain: <Hostname along with the domain of this VM>
+      <hostname of slave node-02>:
+        vm_ip: <IP address of slave node-02>
+        hostname_domain: <Hostname along with the domain of this VM>
+      <hostname of master node-02>:
+        vm_ip: <IP address of master node-02>
+        type: NAMENODE,KUBERNETES,HYPERKUBE_SCHEDULER,HYPERKUBE_APISERVER,HYPERKUBE_CONTROLLER_MANAGER,FLANNEL,DOCKER,HYPERKUBE_PROXY,HYPERKUBE_KUBELET,HMASTER,HIVE,HADOOP_HDFS,HADOOP_YARN,ZKFC,HBASE,SPARK,PGHA_WHATCHDOG,RESOURCE_MANAGER,JOURNALNODE,KUBERNETES_DASHBOARD,HIVE_METASTORE,CDAP,CDAP_AUTH_SERVER,CDAP_MASTER,CDAP_ROUTER,CDAP_UI
+        hostname_domain: <Hostname along with the domain of this VM>
+      <hostname of slave node-03>:
+        vm_ip: <IP address of slave node-03>
+        hostname_domain: <Hostname along with the domain of this VM>

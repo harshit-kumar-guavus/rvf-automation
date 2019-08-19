@@ -1,0 +1,4 @@
+nimble
+pytest
+pytest-html
+selenium

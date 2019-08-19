@@ -1,0 +1,17 @@
+*.swp
+*.swo
+*.pyc
+*.pyo
+.idea
+.*cache
+*.egg
+*.log
+.DS_Store
+*.tgz
+*.gz
+*.tar.gz
+*.tar
+static-tmp
+target/
+dist/
+*.egg-info/
